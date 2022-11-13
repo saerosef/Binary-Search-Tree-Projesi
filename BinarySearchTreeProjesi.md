@@ -1,21 +1,95 @@
-#Patika.dev Merge Sort Porjesi
+# Patika.dev Binary Search Tree
 
-##[16,21,11,8,12,22] -> Merge Sort
+## [7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız. 
+Örnek: root x'dir. root'un sağından y bulunur. Solunda z bulunur vb.
 
-##1. Yukarıdaki dizinin sort türüne göre aşamalarını yazınız. 
-
-```
-1. [16,21,11,8,12,22]
-2. [16,21,11] [8,12,22]
-3. [16,21] [11] [8,12] [22]
-4. [11,16,21] [8,12,22]
-5. [8,11,12,16,21,22]
-
-```
-##2. Big-O gösterimini yazınız.
 
 ````
-
-2^x = n  ---> logn = x  , her case için O(nlogn)
+1. Root 7'dir. 
+2. 5, 7'den küçük olduğu için soluna yazılır. 
+3. 1, 5'ten küçük olduğu için 5'in soluna yazılır. 
+4. 8, 7'den büyük olduğu için 7'nin sağına yazılır. 
+5. 3, 1'den büyük olduğu için 1'in sağına yazılır.
+6. 6, 5'ten büyük olduğu için 5'in sağına yazılır.
+7. 0, 1'den küçük olduğu için 1'in soluna yazılır.
+8. 9, 8'den büyük olduğu için 8'in sağına yazılır. 
+9. 4, 3'ten büyük olduğu için 3'ün sağına yazılır.
+10. 2, 3'ten küçük olduğu için 3'ün soluna yazılır.
 ````
-https://www.patika.dev/
+
+
+1. 7
+
+2.         7
+          /
+         5
+
+3.           7
+            /
+           5 
+          /
+         1 
+
+4.           7
+            / \
+           5   8
+          /
+         1 
+
+5.           7
+            / \
+           5   8
+          /
+         1
+          \
+           3
+
+6.           7     
+            / \
+           5   8
+          / \
+         1  6
+          \
+           3  
+       
+7.             7     
+              / \
+             5   8
+            / \   
+           1   6   
+          / \
+         0   3 
+     
+8.           7     
+            / \
+           5   8
+          / \   \
+         1   6   9
+        / \
+       0   3 
+      
+9.           7     
+            / \
+           5   8
+          / \   \
+         1   6   9
+        / \
+       0   3 
+            \
+             4 
+            
+10.            7     
+              / \
+             5   8
+            / \   \
+           1   6   9
+          / \
+         0   3 
+            / \
+           2   4 
+        
+
+
+
+
+[patika.dev] https://www.patika.dev/
